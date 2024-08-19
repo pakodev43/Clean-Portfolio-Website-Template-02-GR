@@ -1,0 +1,57 @@
+var data = {
+
+    "title": "Murad Khan",
+    "description": "Neque facilisis a, faucibus orci orci nulla eget dictumst congue interdum etiam aliquam lobortis egestas pretium porttitor eget gravida urna, cursus imperdiet in arcu.",
+    "keywords": "keyword1, keyword2, keyword3, onwards..",
+
+    "logo_text": "Murad Khan",
+    "main_heading_text": "Murad Khan",
+
+    "bio_heading": "Social Media Marketing Manager with BS in Marketing.",
+    "bio_paragraph_1": "Neque facilisis a, faucibus orci orci nulla eget dictumst congue interdum etiam aliquam lobortis egestas pretium porttitor eget gravida urna, cursus imperdiet in arcu.",
+    "bio_paragraph_2": "Turpis elementum, ultrices dui maecenas quisque cras dui sed porttitor aliquam morbi libero egestas lacus sed.",
+    "bio_paragraph_3": "Commodo sit arcu curabitur egestas metus, dictum lectus vulputate sed pharetra nisl, sed eget pellentesque magna porttitor sed in maecenas maecenas rhoncus neque imperdiet eget bibendum malesuada enim, eu eu ac id pharetra ultrices tempus accumsan aenean nullam egestas viverra.",
+
+
+    "service_1_title": "Technology Solutions",
+    "service_1_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+    "service_2_title": "Technology Solutions",
+    "service_2_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+    "service_3_title": "Technology Solutions",
+    "service_3_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+    "service_4_title": "Technology Solutions",
+    "service_4_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+    "service_5_title": "Technology Solutions",
+    "service_5_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+    "service_6_title": "Technology Solutions",
+    "service_6_description": "Share some details here for Service three. This is a flexible section where you can share anything you want. It could be details or some information about your service.",
+
+
+    "testimonial_1_text": "Exceptional service! This company goes above and beyond to meet their customers’ needs. I couldn’t be happier with the results.",
+    "testimonial_1_client_name": "Sarmad Khan",
+
+    "testimonial_2_text": "Exceptional service! This company goes above and beyond to meet their customers’ needs. I couldn’t be happier with the results.",
+    "testimonial_2_client_name": "Sarmad Khan",
+
+    "testimonial_3_text": "Exceptional service! This company goes above and beyond to meet their customers’ needs. I couldn't be happier with the results.",
+    "testimonial_3_client_name": "Sarmad Khan",
+
+
+    "contact_section_bold_text": "Lorem ipsum dolor",
+    "contact_section_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus doloremque aliquid ipsam nulla facere rem.",
+
+
+    "address": "2360 Hood Avenue, San Diego, CA, 92123",
+    "phone": "+00 012 3456789",
+    "email": "contact@example.com",
+
+
+    "social_media_link_facebook": "https://facebook.com/@",
+    "social_media_link_x": "https://x.com/@",
+    "social_media_link_instagram": "https://instagram.com/@"
+}

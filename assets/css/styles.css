@@ -1,0 +1,773 @@
+/*
+Author: "Pakodev"
+Email: pakodev.info@gmail.com
+*/
+
+/*--- Style Sheet ---*/
+
+/* Used mobile layout first approach */
+/* Break Points for
+    Tablet view:   (min-width: 34rem)
+    Medium view:   (min-width: 47.875rem)
+    Desktop view:   (min-width: 57.625rem)
+    Large view:   (min-width: 61rem)
+*/
+
+
+/* Fonts from Google Fonts: 'Inter' and 'Work Sans' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*----- Global Variables -----*/
+/*----------------------------*/
+:root{
+
+    /* Colors */
+    --clr-accent: rgb(255, 255, 255);
+    --clr-primary: hsl(208, 45%, 6%);
+    --clr-secondary: hsl(189, 64%, 41%);
+
+    --clr-white: rgb(255, 255, 255);
+    --clr-black: rgb(0, 0, 0);
+
+    
+    /* Fonts */
+    --f-primary: "Inter", sans-serif;
+    --f-secondary: "Work Sans", sans-serif;
+
+}
+
+
+/*--- Resets ---*/
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--f-primary);
+    color: var(--clr-accent);
+    background-color: var(--clr-primary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+
+/*--- Repeating Styles ---*/
+
+.hidden {
+    display: none;
+}
+
+.hidden_on_desktop {
+    @media (min-width: 57.625rem) {
+        display: none;
+    }
+}
+
+.hidden_on_mobile {
+    display: none;
+
+    @media (min-width: 57.625rem) {
+        display: initial;
+    }
+}
+
+.header, .section, .footer {
+    max-width: 75rem;
+    margin-inline: auto;
+}
+
+
+
+/*------- Typography -------*/
+/*--------------------------*/
+
+.logo_text {
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.top_nav_link {
+    font-size: 14px;
+    
+    @media (min-width: 57.625rem) {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+.main_heading {
+    font-size: 3rem;
+    font-family: var(--f-secondary);
+    font-weight: 600;
+    
+    @media (min-width: 34rem) {
+        font-size: 4rem;
+    }
+    
+    @media (min-width: 57.625rem) {
+        font-size: 5rem;
+    }
+}
+
+.hero_sec_link {
+    font-size: .625rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.about_sec_heading {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--clr-secondary);
+
+    @media (min-width: 34rem) {
+        font-size: .9rem;
+    }
+
+    @media (min-width: 57.625rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.about_sec_main_text, .services_sec_heading, .portfolio_sec_heading, .service_card_heading, .testimonial_sec_heading, .contact_sec_heading {
+    font-size: 2rem;
+    font-family: var(--f-secondary);
+    font-weight: 600;
+    text-align: center;
+    
+    @media (min-width: 34rem) {
+        font-size: 2.25rem;
+    }
+    
+    @media (min-width: 57.625rem) {
+        font-size: 2.5rem;
+    }
+}
+
+.about_sec_main_text {
+    text-align: left;
+}
+
+.about_sec_para, .service_card_text, .portfolio_sec_heading_text, .testimonial_card_text, .contact_sec_text, .value {
+    font-size: .9rem;
+    line-height: 27px;
+    
+    @media (min-width: 57.625rem) {
+        font-size: 1rem;
+    }
+}
+
+.portfolio_sec_heading_text, .testimonial_card_text {
+    text-align: center;
+}
+
+.contact_sec_text {
+    line-height: 30px;
+}
+
+.services_sec_heading_prefix {
+    font-size: 0.938rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: 47.875rem) {
+        font-size: 1rem;
+    }
+}
+
+.service_card_heading, .contact_sec_heading {
+    text-align: left;
+}
+
+.service_card_numbering {
+    font-size: 0.938rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    @media (min-width: 47.875rem) {
+        font-size: 1rem;
+    }
+}
+
+.service_card_heading, .testimonial_sec_heading {
+    font-size: 1.5rem;
+
+    @media (min-width: 34rem) {
+        font-size: 1.875rem;
+    }
+    
+    @media (min-width: 57.625rem) {
+        font-size: 2rem;
+    }
+}
+
+.contact_sec_second_heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-block-end: 1rem;
+}
+
+.testimonial_name {
+    font-size: 0.938rem;
+    font-weight: 500;
+
+    @media (min-width: 47.875rem) {
+        font-size: 1rem;
+    }
+}
+
+.footer_nav_link {
+    font-size: 0.855rem;
+
+    @media (min-width: 57.625rem) {
+        font-size: 0.938rem;
+    }
+}
+
+.copyright_text {
+    font-size: 0.798rem;
+
+    @media (min-width: 57.625rem) {
+        font-size: 0.875rem;
+    }
+}
+
+
+
+/*------- Margins and Paddings -------*/
+/*------------------------------------*/
+
+.header, .section, .footer {
+    padding-inline: 1.5rem;
+
+    @media (min-width: 47.875rem) {
+        padding-inline: 2.5rem;
+    }
+
+}
+
+.header {
+    padding-block: 1rem;
+    
+    @media (min-width: 57.625rem) {
+        padding-block: 1.75rem;
+        padding-block: 2rem 1.75rem;
+    }
+}
+
+.section {
+    padding-block: 4rem;
+
+    @media (min-width: 47.875rem) {
+        padding-block: 5rem;
+    }
+
+    @media (min-width: 61rem) {
+        padding-block: 7rem;
+    }
+}
+
+.about_section {
+    padding-block: 4rem 5rem;
+    
+    @media (min-width: 47.875rem) {
+        padding-block: 8rem 0;
+    }
+    
+    @media (min-width: 61rem) {
+        padding-block: 9rem 6.25rem;
+    }
+}
+
+.hero_sec_link_div {
+    margin-block: 2rem;
+}
+
+.about_sec_heading {
+    margin-block-end: 2rem;
+
+    @media (min-width: 47.875rem) {
+        margin-block-end: 3rem;
+    }
+}
+
+.about_sec_main_text {
+    margin-block: 2rem;
+    
+    @media (min-width: 47.875rem) {
+        margin-block: unset;
+    }
+}
+
+.about_sec_para p {
+    margin-block-end: 1.875rem;
+}
+
+.services_sec_heading_prefix {
+    margin-block-end: 1rem;
+}
+
+.services_sec_heading {
+    margin-block-end: 2.5rem;
+
+    @media (min-width: 47.875rem) {
+        margin-block-end: 4rem;
+    }
+}
+
+.service_card {
+    margin-block-end: 1.5rem;
+    
+    @media (min-width: 34rem) {
+        margin-block-end: unset;
+    }
+}
+
+.service_card_numbering {
+    margin-block-end: 1rem;
+}
+
+.service_card_heading {
+    margin-block-end: .75rem;
+}
+
+.portfolio_sec_heading {
+    margin-block-end: .75rem;
+}
+
+.portfolio_sec_heading_text {
+    margin-block-end: 2.5rem;
+    
+    @media (min-width: 47.875rem) {
+        margin-block-end: 3.125rem;
+    }
+    
+    @media (min-width: 61rem) {
+        margin-block-end: 3.75rem;
+    }
+}
+
+.portfolio_item_card {
+    margin-block-end: 1.5rem;
+    
+    @media (min-width: 47.875rem) {
+        margin-block-end: unset;
+    }
+}
+
+.testimonial_sec_heading {
+    margin-block-end: .75rem;
+}
+
+.line {
+    margin-block-end: 3rem;
+}
+
+.qoute_mark {
+    margin-block-end: .625rem;
+}
+
+.testimonial_card_text {
+    margin-block-end: 1rem;
+}
+
+.testimonial_dp_div {
+    margin-block-end: 0.313rem;
+}
+
+.contact_sec_heading {
+    margin-block-end: 2rem;
+}
+
+
+
+
+/*------- HEADER -------*/
+/*----------------------*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.top_nav {
+    display: none;
+
+    @media (min-width: 57.625rem) {
+        display: initial;
+    }
+}
+
+.opened_top_nav {
+    display: initial;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 1.25rem;
+
+    background-color: var(--clr-primary);
+}
+
+.top_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    
+    @media (min-width: 57.625rem) {
+        flex-direction: unset;
+        align-items: center;
+        gap: 2.5rem;
+    }
+}
+
+.nav_toggle_btn {
+    padding: 0.684rem 0.684rem;
+    border-radius: 2px;
+    background-color: var(--clr-accent);
+}
+
+.nav_toggle_btn svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+/*----- Navigation Link -----*/
+/*---------------------------*/
+
+.top_nav_link {
+    
+    @media (min-width: 57.625rem) {
+        text-transform: uppercase;
+    }
+}
+
+.top_nav_link, .footer_nav_link {
+    transition: color .2s ease;
+}
+
+.top_nav_link:hover, .footer_nav_link:hover {
+    color: var(--clr-secondary);
+}
+
+
+
+/*----- Social Icons -----*/
+/*------------------------*/
+
+.social_icons {
+    @media (min-width: 57.625rem) {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.social_icon svg {
+    width: 18px;
+    aspect-ratio: 1/1;
+}
+
+.social_icon svg path {
+    fill: var(--clr-accent);
+    transition: fill .2s ease;
+}
+
+.icon_link:hover svg path {
+    fill: var(--clr-secondary);
+}
+
+
+
+
+/*** MAIN ***/
+
+/*----- Hero Section -----*/
+/*------------------------*/
+
+.hero_section {
+    min-height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    
+    @media (min-width: 47.875rem) {
+        min-height: 27.5rem;
+    }
+    
+    @media (min-width: 61rem) {
+        min-height: 90vh;
+    }
+}
+
+.hero_sec_link {
+    padding: .625rem 1.25rem;
+    border: 1px solid var(--clr-accent);
+    text-transform: uppercase;
+    transition: padding .1s ease;
+}
+
+.hero_sec_link:hover {
+    padding: .865rem 1.5rem;
+}
+
+
+
+/*----- About Section -----*/
+/*-------------------------*/
+
+.about_section {
+    text-align: left;
+}
+
+.about_section_content {
+    @media (min-width: 47.875rem) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+
+
+/*----- Services Section -----*/
+/*----------------------------*/
+
+.service_cards_div {
+    @media (min-width: 47.875rem) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+
+
+/*----- Portfolio Section -----*/
+/*-----------------------------*/
+
+.portfolio_sec_heading_text {
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+.portfolio_items_div {
+    @media (min-width: 47.875rem) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    @media (min-width: 61rem) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.portfolio_item_card {
+    border-radius: 6px;
+}
+
+.portfolio_item_image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+
+/*----- Testimonial Section -----*/
+/*-------------------------------*/
+
+.testimonial_section {
+    text-align: center;
+}
+
+.line {
+    height: 1px;
+    width: 40px;
+    margin-inline: auto;
+    background-color: hsl(45, 5%, 17%);
+}
+
+.testimonial_cards_div {
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 2.5rem;
+
+    @media (min-width: 47.875rem) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4.5rem;
+    }
+}
+
+.qoute_mark svg {
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+
+.qoute_mark svg path {
+    fill: var(--clr-accent);
+}
+
+.testimonial_dp_div {
+    width: 32px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.testimonial_dp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+/*----- Contact Section -----*/
+/*---------------------------*/
+
+.contact_sec_flex {
+    @media (min-width: 47.875rem) {
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+.contact_box {
+    padding-block: 1.5rem;
+}
+
+.attribute {
+    margin-block-end: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    text-transform: uppercase;
+}
+
+.attribute svg {
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.attribute svg path {
+    fill: var(--clr-accent);
+}
+
+
+.contact_sec_wrraper {
+    @media (min-width: 47.875rem) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+.contact_sec_text {
+    max-width: 40ch;
+}
+
+.contact_sec__right_sec {
+    margin-block-start: 2rem;
+
+    @media (min-width: 47.875rem) {
+        margin-block-start: unset;
+    }
+}
+
+
+
+
+/***** FOOTER *****/
+/******************/
+
+.footer {
+    text-align: center;
+}
+
+.footer_bar {
+    padding-block: 5rem 2.5rem;
+    padding-inline: 2.5rem;
+    border-block-start: 1px solid rgba(227,227,227,0.16);
+    
+    @media (min-width: 57.625rem) {
+        padding-block: 6.5rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.footer_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    
+    @media (min-width: 34rem) {
+        flex-direction: unset;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.footer_nav {
+    margin-block-end: 3.3rem;
+    
+    @media (min-width: 57.625rem) {
+        margin-block-end: unset;
+    }
+}
+
+.footer_social_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.copyright_div {
+    padding-block: 3rem 3rem;
+}
+
+
+/*---------- THE END ----------*/
