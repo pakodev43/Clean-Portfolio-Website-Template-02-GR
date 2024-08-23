@@ -279,7 +279,7 @@ button {
 }
 
 .section {
-    padding-block: 4rem;
+    padding-block: 2.5rem;
 
     @media (min-width: 47.875rem) {
         padding-block: 5rem;
@@ -291,7 +291,7 @@ button {
 }
 
 .about_section {
-    padding-block: 4rem 5rem;
+    padding-block: 4rem;
     
     @media (min-width: 47.875rem) {
         padding-block: 8rem 0;
